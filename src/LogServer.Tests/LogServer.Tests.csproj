@@ -44,12 +44,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client\LogServerConnectionTests.cs" />
     <Compile Include="Common\LevelTests.cs" />
     <Compile Include="Common\LogEntryTests.cs" />
     <Compile Include="Client\LoggerTests.cs" />
+    <Compile Include="Core\BrokerTests.cs" />
+    <Compile Include="Core\ConditionTests.cs" />
+    <Compile Include="Core\LogEntryTests.cs" />
+    <Compile Include="Core\LogServerConfigTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -66,9 +72,7 @@
       <Name>LogServer.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,9 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\LogServer.Core\SharedAssemblyAttributes.cs">
+      <Link>SharedAssemblyAttributes.cs</Link>
+    </Compile>
     <Compile Include="Broker.cs" />
     <Compile Include="LogEntryBuilder.cs" />
     <Compile Include="Logger.cs" />
+    <Compile Include="LogServerConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

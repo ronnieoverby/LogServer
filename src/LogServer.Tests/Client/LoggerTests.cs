@@ -10,31 +10,54 @@ namespace LogServer.Tests.Client
         public void CanCreateLoggerForThisClass()
         {
             var logger = Logger.ForThis();
-            Assert.Equal(GetType(), logger.Type);
+            var type = GetType();
+            Assert.Equal(type.FullName, logger.Name);
         }
 
         [Fact]
         public void CanCreateLoggerForSpecifiedClass()
         {
-            var logger = new Logger(typeof (Int64));
-
-            Assert.Equal(typeof (Int64), logger.Type);
+            var logger = Logger.Create<long>();
+            var type = typeof (Int64);
+            var logger2 = Logger.Create(type);
+            Assert.Equal(type.FullName, logger.Name);
+            Assert.Equal(type.FullName, logger2.Name);
         }
 
         [Fact]
         public void LoggersAreCachedAndReusedForTheSameType()
         {
-            var logger = Logger.ForThis();
-            var logger2 = Logger.ForThis();
+            var l1 = Logger.ForThis();
 
-            Assert.Same(logger, logger2);
+            Assert.Same(l1, Logger.ForThis());
+            Assert.Same(l1, Logger.Create<LoggerTests>());
+            Assert.Same(l1, Logger.Create(GetType()));
+            Assert.Same(l1, Logger.Create("LogServer.Tests.Client.LoggerTests"));
         }
 
         [Fact]
         public void CanLogVariousLevels()
         {
             var logger = Logger.ForThis();
+
+            logger.Trace("A very minute thing happened.{0}", false);
+            logger.Debug("Perhaps this will help you during development, {0}", 12345);
             logger.Info("Something informative for {0}.", "Ronnie");
+            logger.Warn("Uh oh... This could be a problem. See: {0}", DateTime.UtcNow);
+            logger.Error("Yikes, this is bad!");
+            logger.Fatal("** SYSTEM DOWN | SYSTM DWNN | STm d... ___  **");
+        }
+
+        [Fact]
+        public void CanConfigLogger()
+        {
+            Logger.Config("log1", "log2", "url=http://localhost:1337;username=ronnie;password=$tr0ngP@ss");
+        }
+
+        [Fact]
+        public void CantUseGarbageConnectionStringsToConfigLogger()
+        {
+            Assert.Throws<FormatException>(() => Logger.Config("murder she wrote"));
         }
     }
 }

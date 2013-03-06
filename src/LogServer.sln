@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogServer.Common", "LogServer.Common\LogServer.Common.csproj", "{4837AB5D-1A1D-499C-998A-2007B328C66F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogServer.Client", "LogServer.Client\LogServer.Client.csproj", "{2A30AC92-CD45-4C93-9824-9C07D3AB917E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogServer.Core", "LogServer.Core\LogServer.Core.csproj", "{69C9A947-5666-48CA-A9DF-317A35D8294A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogServer.Tests", "LogServer.Tests\LogServer.Tests.csproj", "{6665333D-52E1-4FC8-8FC6-713B3CE7DE5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4837AB5D-1A1D-499C-998A-2007B328C66F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4837AB5D-1A1D-499C-998A-2007B328C66F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4837AB5D-1A1D-499C-998A-2007B328C66F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4837AB5D-1A1D-499C-998A-2007B328C66F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A30AC92-CD45-4C93-9824-9C07D3AB917E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A30AC92-CD45-4C93-9824-9C07D3AB917E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A30AC92-CD45-4C93-9824-9C07D3AB917E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A30AC92-CD45-4C93-9824-9C07D3AB917E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C9A947-5666-48CA-A9DF-317A35D8294A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C9A947-5666-48CA-A9DF-317A35D8294A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C9A947-5666-48CA-A9DF-317A35D8294A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C9A947-5666-48CA-A9DF-317A35D8294A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6665333D-52E1-4FC8-8FC6-713B3CE7DE5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6665333D-52E1-4FC8-8FC6-713B3CE7DE5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6665333D-52E1-4FC8-8FC6-713B3CE7DE5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6665333D-52E1-4FC8-8FC6-713B3CE7DE5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

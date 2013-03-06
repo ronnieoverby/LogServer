@@ -39,6 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\LogServer.Core\SharedAssemblyAttributes.cs">
+      <Link>SharedAssemblyAttributes.cs</Link>
+    </Compile>
     <Compile Include="JetBrainsAnnotations.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="LogEntry.cs" />
